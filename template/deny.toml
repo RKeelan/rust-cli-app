@@ -1,0 +1,26 @@
+[graph]
+targets = []
+
+[bans]
+# Deny wildcard version specs like "*", ">=0", or missing patch versions
+wildcards = "deny"
+multiple-versions = "warn"
+
+[licenses]
+allow = [
+    "MIT",
+    "Apache-2.0",
+    "BSD-3-Clause",
+    "ISC",
+    "OpenSSL",
+    "MPL-2.0",
+    "Unicode-3.0",
+    "CDLA-Permissive-2.0",
+]
+unused-allowed-license = "allow"
+
+[advisories]
+db-path = "~/.cargo/advisory-db"
+db-urls = ["https://github.com/rustsec/advisory-db"]
+unmaintained = "all"
+yanked = "deny"

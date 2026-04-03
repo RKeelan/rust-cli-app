@@ -1,0 +1,24 @@
+[template]
+cargo_generate_version = ">=0.10.0"
+
+[placeholders.description]
+type = "string"
+prompt = "Project description"
+
+[placeholders.github_username]
+type = "string"
+prompt = "GitHub username"
+default = "RKeelan"
+
+[placeholders.open_source]
+type = "bool"
+prompt = "Open source (MIT licence)?"
+default = true
+
+[placeholders.publish_to_crates_io]
+type = "bool"
+prompt = "Publish to crates.io?"
+default = false
+
+[conditional.'!publish_to_crates_io']
+ignore = [".github/workflows/publish.yml"]

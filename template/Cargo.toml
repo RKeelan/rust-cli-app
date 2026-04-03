@@ -1,0 +1,18 @@
+[package]
+name = "{{ project-name }}"
+version = "0.1.0"
+edition = "2021"
+description = "{{ description }}"
+{%- if open_source %}
+license = "MIT"
+{%- else %}
+license-file = "LICENSE"
+{%- endif %}
+{%- unless publish_to_crates_io %}
+publish = false
+{%- endunless %}
+repository = "https://github.com/{{ github_username }}/{{ project-name }}"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
