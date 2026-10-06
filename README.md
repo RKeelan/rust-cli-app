@@ -16,7 +16,7 @@ cargo generate gh:rkeelan/rust-cli-app template
 - `clap` (derive) for argument parsing, `anyhow` for error handling
 - CI: `cargo fmt`, `clippy`, `build`, `test`, and `cargo-deny`
 - Claude Code workflow (Sonnet + Opus)
-- Dependabot (weekly, cargo + github-actions)
+- Dependabot (monthly, cargo + github-actions)
 - MIT licence (optional)
 - crates.io publishing workflow (optional)
 
